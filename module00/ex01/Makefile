@@ -6,13 +6,13 @@
 #    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/11 18:55:18 by xle-baux          #+#    #+#              #
-#    Updated: 2022/09/13 13:23:33 by xle-baux         ###   ########.fr        #
+#    Updated: 2022/09/14 17:32:06 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= megaphone
+NAME	= PhoneBook
 
-SRCS	= megaphone.cpp
+SRCS	= MyAwesomePhoneBook.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
