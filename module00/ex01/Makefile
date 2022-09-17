@@ -6,13 +6,13 @@
 #    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/11 18:55:18 by xle-baux          #+#    #+#              #
-#    Updated: 2022/09/14 17:32:06 by xle-baux         ###   ########.fr        #
+#    Updated: 2022/09/17 16:43:58 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= PhoneBook
 
-SRCS	= MyAwesomePhoneBook.cpp
+SRCS	= MyAwesomePhoneBook.cpp PhoneBook.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
@@ -21,6 +21,9 @@ FLAGS	= -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -f
 
+
+.cpp.o:		
+				${CXX} ${FLAGS} -c $< -o ${<:.cpp=.o}
 
 all:		${NAME}
 
