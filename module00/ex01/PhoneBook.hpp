@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:53:23 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/09/17 19:29:48 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/09/18 17:27:01 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <stdlib.h>
 
 class	Contact
 {
@@ -42,6 +43,7 @@ private:
 public:
 	void	addContact(int i);
 	void	printContactList();
+	void	printContactInfo();
 };
 
 #endif
