@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:54:20 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/09/18 17:44:24 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/09/21 11:42:37 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,10 +72,10 @@ void	printInTenChar(std::string tab) {
 	int	i(0);
 
 	if (tab.size() < 10) {
-		std::cout << tab;
 		while (i++ + tab.size() < 10) {
 			std::cout << " ";
 		}
+		std::cout << tab;
 	}
 	else {
 		while (i < 9)

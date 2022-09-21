@@ -6,7 +6,7 @@
 #    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 17:49:24 by xle-baux          #+#    #+#              #
-#    Updated: 2022/09/20 18:48:47 by xle-baux         ###   ########.fr        #
+#    Updated: 2022/09/21 11:48:11 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS	= Account.cpp tests.cpp
 OBJS	= ${SRCS:.cpp=.o}
 
 CXX		= c++
-FLAGS	=  -std=c++98
+FLAGS	= -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -f
 

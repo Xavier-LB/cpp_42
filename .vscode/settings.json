@@ -36,6 +36,7 @@
 		"optional": "cpp",
 		"ranges": "cpp",
 		"tuple": "cpp",
-		"utility": "cpp"
+		"utility": "cpp",
+		"ctime": "cpp"
 	}
 }
