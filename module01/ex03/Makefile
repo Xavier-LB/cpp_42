@@ -6,13 +6,13 @@
 #    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 12:05:46 by xle-baux          #+#    #+#              #
-#    Updated: 2022/09/23 14:43:37 by xle-baux         ###   ########.fr        #
+#    Updated: 2022/09/25 12:24:58 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= Unnecessary_violence
 
-SRCS	= main.cpp Weapon.cpp HumanA.cpp 
+SRCS	= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
