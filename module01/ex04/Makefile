@@ -6,7 +6,7 @@
 #    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/25 14:29:41 by xle-baux          #+#    #+#              #
-#    Updated: 2022/09/25 14:30:34 by xle-baux         ###   ########.fr        #
+#    Updated: 2022/10/06 14:22:20 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,10 +30,10 @@ ${NAME}:	${OBJS}
 				${CXX} ${FLAGS} -o ${NAME} ${OBJS}
 
 clean:		
-				${RM} ${OBJS}
+				${RM} ${OBJS} *.replace
 
 fclean:		clean
-				${RM} ${NAME}
+				${RM} ${NAME} 
 
 re:			fclean all
 

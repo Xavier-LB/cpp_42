@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 08:18:54 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/09/23 11:09:01 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/10/06 13:35:14 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <iostream>
 
-class Zombie {
-
+class Zombie
+{
 private:
 
 	std::string m_name;
@@ -27,8 +27,8 @@ public:
 	Zombie();
 	~Zombie();
 	
-	void setName(std::string name);
-	void announce( void );;
+	void	setName(std::string name);
+	void	announce( void );;
 };
 
 Zombie*	zombieHorde( int N, std::string name );

@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 12:14:53 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/09/25 14:15:45 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/10/06 13:55:54 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ private:
 
 std::string name;
 Weapon		&Weapon;
-
 
 
 public:

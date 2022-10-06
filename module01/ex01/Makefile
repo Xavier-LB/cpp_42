@@ -6,11 +6,11 @@
 #    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 08:17:55 by xle-baux          #+#    #+#              #
-#    Updated: 2022/09/23 10:36:10 by xle-baux         ###   ########.fr        #
+#    Updated: 2022/10/06 13:37:29 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= Moar_brainz!
+NAME	= Moar_brainz
 
 SRCS	= main.cpp Zombie.cpp zombieHorde.cpp
 

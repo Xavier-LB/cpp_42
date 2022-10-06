@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 14:30:12 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/09/29 15:39:09 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/10/06 14:05:10 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,17 @@ int main(int argc, char *argv[])
 {
 	if (argc != 4)
 		return (1);
-	std::string filename (argv[1]);
-	std::string s1(argv[2]);
-	std::string s2(argv[3]);
-	std::string newFilename;
-	std::string line;
-	std::ifstream infile;
-	std::ofstream outfile;
+	std::string		filename (argv[1]);
+	std::string		s1(argv[2]);
+	std::string		s2(argv[3]);
+	std::string		newFilename;
+	std::string		line;
+	std::ifstream	infile;
+	std::ofstream	outfile;
 
 	infile.open(argv[1], std::ios::in);
 	newFilename = filename + ".replace";
 	outfile.open(newFilename.c_str(), std::ios::trunc);
-
 	while (std::getline(infile, line))
 	{
 		outfile << replace(line, s1, s2);
