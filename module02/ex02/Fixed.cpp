@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 15:22:32 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/18 14:20:33 by xle-baux         ###   ########.fr       */
+/*   Created: 2022/11/18 14:38:36 by xle-baux          #+#    #+#             */
+/*   Updated: 2022/11/18 17:02:50 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,40 @@ Fixed::~Fixed()
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
 	return this->value;
 }
 
 void Fixed::setRawBits(int const raw)
 {
 	this->value = raw;
+}
+
+//------------------------------------------------------------------------------
+
+Fixed::Fixed(int const arg)
+{
+	std::cout << "Int constructor called" << std::endl;
+	setRawBits(arg << fixed_point);
+}
+
+Fixed::Fixed(float const arg)
+{
+	std::cout << "Float constructor called" << std::endl;
+	setRawBits((int)roundf(arg * (1 << this->fixed_point)));
+}
+
+float Fixed::toFloat( void ) const
+{
+	return((float)this->getRawBits() / (1 << this->fixed_point));
+}
+
+int Fixed::toInt( void ) const
+{
+	return(this->getRawBits() >> this->fixed_point);
+}
+
+std::ostream& operator << ( std::ostream& output, const Fixed& f )
+{
+	output << f.toFloat();
+	return (output);
 }

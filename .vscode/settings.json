@@ -38,6 +38,7 @@
 		"tuple": "cpp",
 		"utility": "cpp",
 		"ctime": "cpp",
-		"fstream": "cpp"
+		"fstream": "cpp",
+		"numbers": "cpp"
 	}
 }
