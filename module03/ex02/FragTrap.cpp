@@ -1,88 +1,69 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 21:07:20 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/20 13:57:56 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/20 14:38:12 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 // Contructors and Destructor --------------------------------------------------
 
-ScavTrap::ScavTrap(void)
+FragTrap::FragTrap(void)
 {
-	std::cout << "Default constructor ScavTrap called" << std::endl << std::endl;
+	std::cout << "Default constructor FragTrap called" << std::endl << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap const& src)
+FragTrap::FragTrap(FragTrap const& src)
 {
 	*this = src;
-	std::cout << "Copy constructor ScavTrap" << std::endl << std::endl;
+	std::cout << "Copy constructor FragTrap" << std::endl << std::endl;
 	return ;
 }
 
-ScavTrap::ScavTrap(std::string name)
+FragTrap::FragTrap(std::string name)
 {
 	this->m_name = name;
 	this->m_hitPoints = 100;
-	this->m_energyPoints = 50;
-	this->m_attackDamage = 20;
-	std::cout << "Constructor ScavTrap with deafault values called" << std::endl;
+	this->m_energyPoints = 100;
+	this->m_attackDamage = 30;
+	std::cout << "Constructor FragTrap with deafault values called" << std::endl;
 	std::cout << *this << std::endl << std::endl;
 }
 
-ScavTrap & ScavTrap::operator=(ScavTrap const & src)
+FragTrap & FragTrap::operator=(FragTrap const & src)
 {
 	this->m_name= src.m_name;
 	this->m_hitPoints= src.m_hitPoints;
 	this->m_energyPoints= src.m_energyPoints;
 	this->m_attackDamage= src.m_attackDamage;
-	std::cout << "Copy assignment operator ScavTrap called" << std::endl << std::endl;
+	std::cout << "Copy assignment operator FragTrap called" << std::endl << std::endl;
 	return *this;
 }
 
-ScavTrap::~ScavTrap(void)
+FragTrap::~FragTrap(void)
 {
-	std::cout << "Destructor ScavTrap called" << std::endl;
+	std::cout << "Destructor FragTrap called" << std::endl;
 	std::cout << *this << std::endl << std::endl;
 }
 
 
 // Public mandatory functions --------------------------------------------------
 
-void ScavTrap::attack(const std::string& target)
+void FragTrap::highFivesGuys(void)
 {
-	if (this->m_energyPoints > 0)
-	{
-		this->m_energyPoints -= 1;
-		std::cout << "ScavTrap " << this->m_name
-					<< " attacks " << target
-					<< ", causing " << this->m_attackDamage
-					<< " points of damage!" << std::endl << std::endl;
-	}
-	else
-	{
-		std::cout << "ScavTrap " 
-					<< this->m_name << " has not more energy points"
-					<< std::endl << std::endl;
-	}
+	std::cout << "Give me a high five!" << std::endl;
+	return ;
 }
-
-void ScavTrap::guardGate(void)
-{
-	std::cout << "ScavTrap " << this->m_name << " got guard gate " << std::endl;
-}
-
-
 
 // Operator functions ----------------------------------------------------------
 
-std::ostream &operator<<(std::ostream & out, ScavTrap const & src)
+std::ostream &operator<<(std::ostream & out, FragTrap const & src)
 {
 	out << "Name: " << src.getName() << std::endl
 	<< "Hit points: " << src.getHitPoints() << std::endl
