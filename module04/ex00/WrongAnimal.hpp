@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 15:54:45 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/20 19:28:25 by xlb              ###   ########.fr       */
+/*   Created: 2022/11/20 19:14:10 by xlb               #+#    #+#             */
+/*   Updated: 2022/11/20 19:28:14 by xlb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 # include <iostream>
 
-class Animal
+class WrongAnimal
 {
 protected:
 
@@ -24,10 +24,10 @@ protected:
 public:
 
 // Contructors and Destructor --------------------------------------------------
-	Animal(void); // Default constructor
-	Animal(Animal const & src); // Copy constructor
-	virtual ~Animal(void); // Destructor
-	Animal & operator=(Animal const & src); // Copy assignment operator
+	WrongAnimal(void); // Default constructor
+	WrongAnimal(WrongAnimal const & src); // Copy constructor
+	virtual ~WrongAnimal(void); // Destructor
+	WrongAnimal & operator=(WrongAnimal const & src); // Copy assignment operator
 
 // Secondary functions ---------------------------------------------------------
 	const std::string &getType(void) const;

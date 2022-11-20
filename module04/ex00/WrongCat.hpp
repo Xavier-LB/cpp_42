@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 15:54:45 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/20 19:28:25 by xlb              ###   ########.fr       */
+/*   Created: 2022/11/20 19:17:18 by xlb               #+#    #+#             */
+/*   Updated: 2022/11/20 19:23:20 by xlb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-# include <iostream>
+# include "WrongAnimal.hpp"
 
-class Animal
+class WrongCat : public WrongAnimal
 {
-protected:
-
-	std::string type;
-
+private:
+	
 public:
-
 // Contructors and Destructor --------------------------------------------------
-	Animal(void); // Default constructor
-	Animal(Animal const & src); // Copy constructor
-	virtual ~Animal(void); // Destructor
-	Animal & operator=(Animal const & src); // Copy assignment operator
+	WrongCat(void); // Default constructor
+	WrongCat(WrongCat const & src); // Copy constructor
+	~WrongCat(void); // Destructor
+	WrongCat & operator=(WrongCat const & src); // Copy assignment operator
 
 // Secondary functions ---------------------------------------------------------
-	const std::string &getType(void) const;
-	
+	std::string getType(void);
+
 // Mandatory functions ---------------------------------------------------------
 	virtual void makeSound(void) const;
 };
+
 
 #endif
