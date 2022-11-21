@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 12:51:57 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/20 00:20:23 by xlb              ###   ########.fr       */
+/*   Updated: 2022/11/21 14:53:48 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 // Contructors and Destructor --------------------------------------------------
 
-ClapTrap::ClapTrap(void)
+ClapTrap::ClapTrap(void) :	m_name(""),
+							m_hitPoints(100),
+							m_energyPoints(50),
+							m_attackDamage(20)
 {
-	std::cout << "Default constructor ClapTrap called" << std::endl << std::endl;
+	std::cout << "Default constructor called" << std::endl << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const& src)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:52:47 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/20 19:35:15 by xlb              ###   ########.fr       */
+/*   Updated: 2022/11/21 12:09:59 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,6 @@ int main()
 		delete dog;
 		delete wrong;
 	}
-	system("leaks Polymorphism");
+	// system("leaks Polymorphism");
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 21:07:20 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/20 13:57:56 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/21 16:04:44 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 
 ScavTrap::ScavTrap(void)
 {
+	this->m_name = "";
+	this->m_hitPoints = 100;
+	this->m_energyPoints = 50;
+	this->m_attackDamage = 20;
 	std::cout << "Default constructor ScavTrap called" << std::endl << std::endl;
 }
 

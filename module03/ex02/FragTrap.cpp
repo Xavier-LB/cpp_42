@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 21:07:20 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/20 14:38:12 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/21 16:07:10 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 
 FragTrap::FragTrap(void)
 {
+	this->m_name = "";
+	this->m_hitPoints = 100;
+	this->m_energyPoints = 100;
+	this->m_attackDamage = 30;
 	std::cout << "Default constructor FragTrap called" << std::endl << std::endl;
 }
 

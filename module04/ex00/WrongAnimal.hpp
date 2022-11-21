@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 19:14:10 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/20 19:28:14 by xlb              ###   ########.fr       */
+/*   Updated: 2022/11/21 12:13:14 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ public:
 	const std::string &getType(void) const;
 	
 // Mandatory functions ---------------------------------------------------------
-	virtual void makeSound(void) const;
+	void makeSound(void) const;
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 12:52:15 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/19 19:06:47 by xlb              ###   ########.fr       */
+/*   Updated: 2022/11/21 14:53:21 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ private:
 public:
 
 // Contructors and Destructor --------------------------------------------------
-	ClapTrap(); // Default constructor
+	ClapTrap(void); // Default constructor
 	ClapTrap(ClapTrap const& src); // Copy constructor
 	ClapTrap(std::string name);
 	ClapTrap & operator=(ClapTrap const & src); // Copy assignment operator

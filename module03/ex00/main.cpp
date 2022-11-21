@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 12:51:44 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/19 20:46:04 by xlb              ###   ########.fr       */
+/*   Updated: 2022/11/21 16:19:20 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,36 +19,47 @@ int main(void)
 	toto.setAttackDamage(9);
 
 	toto.attack(tata.getName());
+	std::cout << toto << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
 	std::cout << tata << std::endl;
 	toto.attack(tata.getName());
+	std::cout << toto << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
 	std::cout << tata << std::endl;
 	toto.attack(tata.getName());
+	std::cout << toto << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
 	std::cout << tata << std::endl;
 	toto.attack(tata.getName());
+	std::cout << toto << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
 	std::cout << tata << std::endl;
 	toto.attack(tata.getName());
+	std::cout << toto << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
 	std::cout << tata << std::endl;
 	toto.attack(tata.getName());
+	std::cout << toto << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
 	std::cout << tata << std::endl;
 	toto.attack(tata.getName());
+	std::cout << toto << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
 	std::cout << tata << std::endl;
 	toto.attack(tata.getName());
+	std::cout << toto << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
 	std::cout << tata << std::endl;
 	toto.attack(tata.getName());
+	std::cout << toto << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
 	std::cout << tata << std::endl;
 	toto.attack(tata.getName());
+	std::cout << toto << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
 	std::cout << tata << std::endl;
 	toto.attack(tata.getName());
+	std::cout << toto << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
 	std::cout << tata << std::endl;
 	
