@@ -1,52 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 15:55:46 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/22 14:06:31 by xle-baux         ###   ########.fr       */
+/*   Created: 2022/11/22 13:40:17 by xle-baux          #+#    #+#             */
+/*   Updated: 2022/11/22 14:29:39 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Brain.hpp"
 
 // Contructors and Destructor --------------------------------------------------
-Animal::Animal(void)
+Brain::Brain(void)
 {
-	std::cout << "(Animal) Default constructor" << std::endl;
+	std::cout << "(Brain) Default constructor" << std::endl;
 }
 
-Animal::Animal(Animal const & src)
+Brain::Brain(Brain const & src)
 {
 	*this = src;
-	std::cout << "(Animal) Copy constructor" << std::endl;
+	std::cout << "(Brain) Copy constructor" << std::endl;
 }
 
-Animal::~Animal(void)
+Brain::~Brain(void)
 {
-	std::cout << "(Animal) Destructor" << std::endl;
+	std::cout << "(Brain) Destructor" << std::endl;
 }
 
-Animal & Animal::operator=(Animal const & src)
+Brain & Brain::operator=(Brain const & src)
 {
-	if (this != &src)
-	{
-		this->type = src.type;
-	}
-	std::cout << "(Animal) Copy assignment operator" << std::endl;
+    if (this != &src)
+    {
+        for (int i = 0; i < 100; i++)
+        {
+	        this->m_ideas[i] = src.m_ideas[i];
+        }
+    }
+	std::cout << "(Brain) Copy assignment operator" << std::endl;
 	return *this;
 }
 
 // Secondary functions ---------------------------------------------------------
-const std::string &Animal::getType(void) const
-{
-	return (this->type);
-}
+
 
 // Mandatory functions ---------------------------------------------------------
-void Animal::makeSound(void) const
-{
- return ;
-}

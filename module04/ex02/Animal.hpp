@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 15:56:54 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/22 16:24:10 by xle-baux         ###   ########.fr       */
+/*   Created: 2022/11/20 15:54:45 by xle-baux          #+#    #+#             */
+/*   Updated: 2022/11/20 19:28:25 by xlb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-# include "Animal.hpp"
-# include "Brain.hpp"
+# include <iostream>
 
-class Dog : public Animal
+class Animal
 {
-private:
-	Brain *m_brain;
-	
+protected:
+
+	std::string type;
+
 public:
+
 // Contructors and Destructor --------------------------------------------------
-	Dog(void); // Default constructor
-	Dog(Dog const & src); // Copy constructor
-	~Dog(void); // Destructor
-	Dog & operator=(Dog const & src); // Copy assignment operator
+	Animal(void); // Default constructor
+	Animal(Animal const & src); // Copy constructor
+	virtual ~Animal(void); // Destructor
+	Animal & operator=(Animal const & src); // Copy assignment operator
 
 // Secondary functions ---------------------------------------------------------
-	std::string getType(void);
-
+	const std::string &getType(void) const;
+	
 // Mandatory functions ---------------------------------------------------------
 	virtual void makeSound(void) const;
 };
-
 
 #endif

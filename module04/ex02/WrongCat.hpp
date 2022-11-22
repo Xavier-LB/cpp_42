@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 15:56:54 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/22 16:24:10 by xle-baux         ###   ########.fr       */
+/*   Created: 2022/11/20 19:17:18 by xlb               #+#    #+#             */
+/*   Updated: 2022/11/20 19:23:20 by xlb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-# include "Animal.hpp"
-# include "Brain.hpp"
+# include "WrongAnimal.hpp"
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal
 {
 private:
-	Brain *m_brain;
 	
 public:
 // Contructors and Destructor --------------------------------------------------
-	Dog(void); // Default constructor
-	Dog(Dog const & src); // Copy constructor
-	~Dog(void); // Destructor
-	Dog & operator=(Dog const & src); // Copy assignment operator
+	WrongCat(void); // Default constructor
+	WrongCat(WrongCat const & src); // Copy constructor
+	~WrongCat(void); // Destructor
+	WrongCat & operator=(WrongCat const & src); // Copy assignment operator
 
 // Secondary functions ---------------------------------------------------------
 	std::string getType(void);

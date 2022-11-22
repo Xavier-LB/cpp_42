@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 15:56:54 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/22 16:24:10 by xle-baux         ###   ########.fr       */
+/*   Created: 2022/11/22 13:40:35 by xle-baux          #+#    #+#             */
+/*   Updated: 2022/11/22 14:30:10 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-# include "Animal.hpp"
-# include "Brain.hpp"
+# include <iostream>
 
-class Dog : public Animal
+class Brain
 {
 private:
-	Brain *m_brain;
+    std::string m_ideas[100];
 	
 public:
 // Contructors and Destructor --------------------------------------------------
-	Dog(void); // Default constructor
-	Dog(Dog const & src); // Copy constructor
-	~Dog(void); // Destructor
-	Dog & operator=(Dog const & src); // Copy assignment operator
+	Brain(void); // Default constructor
+	Brain(Brain const & src); // Copy constructor
+	~Brain(void); // Destructor
+	Brain & operator=(Brain const & src); // Copy assignment operator
 
 // Secondary functions ---------------------------------------------------------
-	std::string getType(void);
 
 // Mandatory functions ---------------------------------------------------------
-	virtual void makeSound(void) const;
 };
 
 

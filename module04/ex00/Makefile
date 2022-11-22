@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+         #
+#    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/20 15:52:50 by xle-baux          #+#    #+#              #
-#    Updated: 2022/11/20 19:27:14 by xlb              ###   ########.fr        #
+#    Updated: 2022/11/22 13:33:50 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= Animal
+NAME	= Polymorphism
 
 SRCS	= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp
 
