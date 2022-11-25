@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 12:51:57 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/21 14:53:06 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:05:16 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,7 +153,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 	}
 	else
 	{
-		std::cout << this->m_name << " has not more energy points"
+		std::cout << this->m_name << " has not more energy points to be reapair"
 					<< std::endl << std::endl;
 	}
 	return ;

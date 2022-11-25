@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 19:14:12 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/20 19:21:30 by xlb              ###   ########.fr       */
+/*   Updated: 2022/11/25 12:15:52 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ const std::string &WrongAnimal::getType(void) const
 // Mandatory functions ---------------------------------------------------------
 void WrongAnimal::makeSound(void) const
 {
- return ;
+	std::cout << "Wrong Animal" << std::endl;
+	return ;
 }

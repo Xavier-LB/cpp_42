@@ -1,52 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:55:46 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/22 14:06:31 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/25 13:32:53 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
 // Contructors and Destructor --------------------------------------------------
-Animal::Animal(void)
+AAnimal::AAnimal(void)
 {
-	std::cout << "(Animal) Default constructor" << std::endl;
+	std::cout << "(AAnimal) Default constructor" << std::endl;
 }
 
-Animal::Animal(Animal const & src)
+AAnimal::AAnimal(AAnimal const & src)
 {
 	*this = src;
-	std::cout << "(Animal) Copy constructor" << std::endl;
+	std::cout << "(AAnimal) Copy constructor" << std::endl;
 }
 
-Animal::~Animal(void)
+AAnimal::~AAnimal(void)
 {
-	std::cout << "(Animal) Destructor" << std::endl;
+	std::cout << "(AAnimal) Destructor" << std::endl;
 }
 
-Animal & Animal::operator=(Animal const & src)
+AAnimal & AAnimal::operator=(AAnimal const & src)
 {
 	if (this != &src)
 	{
 		this->type = src.type;
 	}
-	std::cout << "(Animal) Copy assignment operator" << std::endl;
+	std::cout << "(AAnimal) Copy assignment operator" << std::endl;
 	return *this;
 }
 
 // Secondary functions ---------------------------------------------------------
-const std::string &Animal::getType(void) const
+const std::string &AAnimal::getType(void) const
 {
 	return (this->type);
 }
 
 // Mandatory functions ---------------------------------------------------------
-void Animal::makeSound(void) const
-{
- return ;
-}

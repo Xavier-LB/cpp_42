@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:52:47 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/21 12:09:59 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/25 12:21:36 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,5 @@ int main()
 		delete dog;
 		delete wrong;
 	}
-	// system("leaks Polymorphism");
 	return (0);
 }

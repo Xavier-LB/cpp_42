@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 12:51:57 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/21 14:53:48 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:27:16 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ ClapTrap::ClapTrap(void) :	m_name(""),
 							m_energyPoints(50),
 							m_attackDamage(20)
 {
-	std::cout << "Default constructor called" << std::endl << std::endl;
+	std::cout << "(ClapTrap) Default constructor called" << std::endl << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const& src)
 {
 	*this = src;
-	std::cout << "Copy constructor ClapTrap" << std::endl << std::endl;
+	std::cout << "(ClapTrap) Copy constructor ClapTrap" << std::endl << std::endl;
 	return ;
 }
 
@@ -34,7 +34,7 @@ ClapTrap::ClapTrap(std::string name) :	m_name(name),
 										m_energyPoints(50),
 										m_attackDamage(20)
 {
-	std::cout << "Constructor ClapTrap with deafault values called" << std::endl;
+	std::cout << "(ClapTrap) Constructor with deafault values called" << std::endl;
 	std::cout << *this << std::endl << std::endl;
 }
 
@@ -44,13 +44,13 @@ ClapTrap & ClapTrap::operator=(ClapTrap const & src)
 	this->m_hitPoints= src.m_hitPoints;
 	this->m_energyPoints= src.m_energyPoints;
 	this->m_attackDamage= src.m_attackDamage;
-	std::cout << "Copy assignment operator ClapTrap called" << std::endl << std::endl;
+	std::cout << "(ClapTrap) Copy assignment operator called" << std::endl << std::endl;
 	return *this;
 }
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "Destructor ClapTrap called" << std::endl;
+	std::cout << "(ClapTrap) Destructor called" << std::endl;
 	std::cout << *this << std::endl << std::endl;
 }
 

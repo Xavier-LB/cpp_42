@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 21:07:20 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/21 16:04:27 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:28:12 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ ScavTrap::ScavTrap(void)
 	this->m_hitPoints = 100;
 	this->m_energyPoints = 50;
 	this->m_attackDamage = 20;
-	std::cout << "Default constructor ScavTrap called" << std::endl << std::endl;
+	std::cout << "(ScavTrap) Default constructor called" << std::endl << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const& src)
 {
 	*this = src;
-	std::cout << "Copy constructor ScavTrap" << std::endl << std::endl;
+	std::cout << "(ScavTrap) Copy constructor" << std::endl << std::endl;
 	return ;
 }
 
@@ -36,7 +36,7 @@ ScavTrap::ScavTrap(std::string name)
 	this->m_hitPoints = 100;
 	this->m_energyPoints = 50;
 	this->m_attackDamage = 20;
-	std::cout << "Constructor ScavTrap with deafault values called" << std::endl;
+	std::cout << "(ScavTrap) Constructor with deafault values called" << std::endl;
 	std::cout << *this << std::endl << std::endl;
 }
 
@@ -46,13 +46,13 @@ ScavTrap & ScavTrap::operator=(ScavTrap const & src)
 	this->m_hitPoints= src.m_hitPoints;
 	this->m_energyPoints= src.m_energyPoints;
 	this->m_attackDamage= src.m_attackDamage;
-	std::cout << "Copy assignment operator ScavTrap called" << std::endl << std::endl;
+	std::cout << "(ScavTrap) Copy assignment operator called" << std::endl << std::endl;
 	return *this;
 }
 
 ScavTrap::~ScavTrap(void)
 {
-	std::cout << "Destructor ScavTrap called" << std::endl;
+	std::cout << "(ScavTrap) Destructor called" << std::endl;
 	std::cout << *this << std::endl << std::endl;
 }
 

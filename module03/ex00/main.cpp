@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 12:51:44 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/21 16:19:20 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/25 11:06:30 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,51 +17,64 @@ int main(void)
 	ClapTrap toto("Toto"), tata("Tata");
 
 	toto.setAttackDamage(9);
+	// toto.beRepaired(5);
 
 	toto.attack(tata.getName());
-	std::cout << toto << std::endl;
+	std::cout << "\033[1;34m" << toto << "\033[0m" << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
-	std::cout << tata << std::endl;
+	std::cout << "\033[1;32m" << tata << "\033[0m" << std::endl;
+
 	toto.attack(tata.getName());
-	std::cout << toto << std::endl;
+	std::cout << "\033[1;34m" << toto << "\033[0m" << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
-	std::cout << tata << std::endl;
+	std::cout << "\033[1;32m" << tata << "\033[0m" << std::endl;
+
 	toto.attack(tata.getName());
-	std::cout << toto << std::endl;
+	std::cout << "\033[1;34m" << toto << "\033[0m" << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
-	std::cout << tata << std::endl;
+	std::cout << "\033[1;32m" << tata << "\033[0m" << std::endl;
+
 	toto.attack(tata.getName());
-	std::cout << toto << std::endl;
+	std::cout << "\033[1;34m" << toto << "\033[0m" << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
-	std::cout << tata << std::endl;
+	std::cout << "\033[1;32m" << tata << "\033[0m" << std::endl;
+
 	toto.attack(tata.getName());
-	std::cout << toto << std::endl;
+	std::cout << "\033[1;34m" << toto << "\033[0m" << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
-	std::cout << tata << std::endl;
+	std::cout << "\033[1;32m" << tata << "\033[0m" << std::endl;
+
 	toto.attack(tata.getName());
-	std::cout << toto << std::endl;
+	std::cout << "\033[1;34m" << toto << "\033[0m" << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
-	std::cout << tata << std::endl;
+	std::cout << "\033[1;32m" << tata << "\033[0m" << std::endl;
+
 	toto.attack(tata.getName());
-	std::cout << toto << std::endl;
+	std::cout << "\033[1;34m" << toto << "\033[0m" << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
-	std::cout << tata << std::endl;
+	std::cout << "\033[1;32m" << tata << "\033[0m" << std::endl;
+
 	toto.attack(tata.getName());
-	std::cout << toto << std::endl;
+	std::cout << "\033[1;34m" << toto << "\033[0m" << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
-	std::cout << tata << std::endl;
+	std::cout << "\033[1;32m" << tata << "\033[0m" << std::endl;
+
 	toto.attack(tata.getName());
-	std::cout << toto << std::endl;
+	std::cout << "\033[1;34m" << toto << "\033[0m" << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
-	std::cout << tata << std::endl;
+	std::cout << "\033[1;32m" << tata << "\033[0m" << std::endl;
+
 	toto.attack(tata.getName());
-	std::cout << toto << std::endl;
+	std::cout << "\033[1;34m" << toto << "\033[0m" << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
-	std::cout << tata << std::endl;
+	std::cout << "\033[1;32m" << tata << "\033[0m" << std::endl;
+
 	toto.attack(tata.getName());
-	std::cout << toto << std::endl;
+	std::cout << "\033[1;34m" << toto << "\033[0m" << std::endl;
 	tata.takeDamage(toto.getAttackDamage());
-	std::cout << tata << std::endl;
+	std::cout << "\033[1;32m" << tata << "\033[0m" << std::endl;
+
+	// toto.beRepaired(5);
 	
 	return 0;
 }

@@ -5,15 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/20 15:52:50 by xle-baux          #+#    #+#              #
-#    Updated: 2022/11/25 13:11:41 by xle-baux         ###   ########.fr        #
+#    Created: 2022/11/25 14:45:26 by xle-baux          #+#    #+#              #
+#    Updated: 2022/11/25 14:46:07 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= Polymorphism
+NAME	= Bureaucrat
 
-SRCS	= main.cpp AAnimal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp \
-			Brain.cpp
+SRCS	= main.cpp Bureaucrat.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 

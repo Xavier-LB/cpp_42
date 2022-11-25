@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 12:51:44 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/20 00:26:21 by xlb              ###   ########.fr       */
+/*   Updated: 2022/11/25 11:32:59 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ int	main( void )
 		toto.guardGate();
 		toto.beRepaired(8);
 		toto.takeDamage(17);
+		std::cout << "\033[1;34m" << toto << "\033[0m" << std::endl;
 	}
+	std::cout << "----------------------------------------------" << std::endl;
 	{
 		ClapTrap Lili("Lili");
 
@@ -35,6 +37,7 @@ int	main( void )
 		Lili.takeDamage(3);
 		Lili.beRepaired(8);
 		Lili.takeDamage(17);
+		std::cout << "\033[1;32m" << Lili << "\033[0m" << std::endl;
 	}
 }
 

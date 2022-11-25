@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 19:17:18 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/20 19:23:20 by xlb              ###   ########.fr       */
+/*   Updated: 2022/11/25 12:16:32 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 	std::string getType(void);
 
 // Mandatory functions ---------------------------------------------------------
-	virtual void makeSound(void) const;
+	void makeSound(void) const;
 };
 
 
