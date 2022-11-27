@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 14:45:29 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/27 14:16:35 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/27 02:13:17 by xlb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <iostream>
 # include <string>
 # include <stdexcept>
+# include "Form.hpp"
 
 class Form;
 
@@ -43,6 +44,9 @@ public:
 // Secondary functions ---------------------------------------------------------
 	void	incrementGrade();
 	void	decrementGrade();
+
+// Mandatory function ----------------------------------------------------------
+	void signForm(Form & form) const;
 
 // Exceptions ------------------------------------------------------------------
 	class GradeTooHighException : public std::exception

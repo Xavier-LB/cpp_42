@@ -1,50 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/25 14:45:29 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/27 14:16:35 by xle-baux         ###   ########.fr       */
+/*   Created: 2022/11/26 22:01:37 by xlb               #+#    #+#             */
+/*   Updated: 2022/11/27 02:16:21 by xlb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#ifndef FORM_HPP
+# define FORM_HPP
 
-# include <iostream>
-# include <string>
+# include "Bureaucrat.hpp"
+# include <iomanip>
 # include <stdexcept>
+# include <string>
 
-class Form;
+class Bureaucrat;
 
-class Bureaucrat
+class Form
 {
 private:
-	const std::string	m_name;
-	int					m_grade;
+	std::string const	m_name;
+	bool				m_signed;
+	int					m_singAuth;
+	int					m_excAuth;
 
 public:
-
 // Contructors and Destructor --------------------------------------------------
-	Bureaucrat(void);
-	Bureaucrat(const std::string &name, int grade);
-	Bureaucrat(Bureaucrat const & src);
-	Bureaucrat & operator=(Bureaucrat const & src);
-	virtual ~Bureaucrat();
-
+	Form();
+	Form(std::string const &name, int singAuth, int excAuth) ;
+	Form(Form const & src);
+	Form & operator=(Form const & src);
+	virtual ~Form();
 
 // Getters ---------------------------------------------------------------------
 	const std::string getName() const;
-	int			getGrade() const;
+	bool getSigned() const;
+	int getSingAuth() const;
+	int getExcAuth() const;
 
 
-// Secondary functions ---------------------------------------------------------
-	void	incrementGrade();
-	void	decrementGrade();
+// Mandatory function ----------------------------------------------------------
+	void beSigned(const Bureaucrat & bureaucrat);
 
-// Exceptions ------------------------------------------------------------------
+// Exceptions -------------------------------------------------------------------
 	class GradeTooHighException : public std::exception
 	{
 		const char *what() const throw();
@@ -57,6 +59,6 @@ public:
 };
 
 // Overload --------------------------------------------------------------------
-std::ostream &operator<<(std::ostream & out, Bureaucrat const & src);
+std::ostream &operator<<(std::ostream & out, Form const & src);
 
 #endif
