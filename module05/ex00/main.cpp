@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 14:45:33 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/25 18:57:33 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/26 21:00:44 by xlb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void testGradeTooLowException() {
 
 void test()
 {
-	Bureaucrat bureaucrat("Anderson", 100);
+	Bureaucrat bureaucrat("Anderson", 152);
 
 	try {
 		bureaucrat.decrementGrade();
