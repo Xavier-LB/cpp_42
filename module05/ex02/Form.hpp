@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 22:01:37 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/27 02:16:21 by xlb              ###   ########.fr       */
+/*   Updated: 2022/11/28 19:16:42 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ public:
 
 // Mandatory function ----------------------------------------------------------
 	void beSigned(const Bureaucrat & bureaucrat);
+	// void execute(Bureaucrat const & executor) const;
 
 // Exceptions -------------------------------------------------------------------
 	class GradeTooHighException : public std::exception
@@ -53,6 +54,11 @@ public:
 	};
 
 	class GradeTooLowException : public std::exception
+	{
+		const char *what() const throw();
+	};
+
+	class ExecuteUnsignedException : public std::exception
 	{
 		const char *what() const throw();
 	};

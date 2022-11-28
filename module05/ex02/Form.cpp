@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 22:01:22 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/27 02:17:14 by xlb              ###   ########.fr       */
+/*   Updated: 2022/11/28 19:16:53 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,20 @@ void Form::beSigned(const Bureaucrat & bureaucrat)
 		throw Form::GradeTooLowException();
 }
 
+// void Form::execute(Bureaucrat const & executor) const
+// {
+// 	if (executor.getGrade() > this->getExcAuth())
+// 	{
+// 		throw GradeTooLowException();
+// 	}
+// 	else if (this->getSigned() == false)
+// 	{
+// 		throw ExecuteUnsignedException();
+// 	}
+// 	else
+// 		action();
+// }
+
 // Exeptions -------------------------------------------------------------------
 const char* Form::GradeTooHighException::what() const throw()
 {
@@ -99,6 +113,11 @@ const char* Form::GradeTooHighException::what() const throw()
 const char* Form::GradeTooLowException::what() const throw()
 {
 	return "Grade too low exception";
+}
+
+const char* Form::ExecuteUnsignedException::what() const throw()
+{
+	return "Execute unsigned exception";
 }
 
 // Overload --------------------------------------------------------------------
@@ -117,3 +136,4 @@ std::ostream &operator<<(std::ostream & out, Form const & src)
 	
 	return out;
 }
+

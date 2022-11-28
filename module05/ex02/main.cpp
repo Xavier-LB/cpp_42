@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 14:45:33 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/27 13:53:55 by xlb              ###   ########.fr       */
+/*   Updated: 2022/11/28 19:18:37 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 void testGradeTooHighException();
 
@@ -21,13 +22,16 @@ void test();
 
 void test2();
 
+void test3();
+
 int main() {
   // testGradeTooHighException();
   // std::cout << "---------------------------------" << std::endl;
   // testGradeTooLowException();
   // std::cout << "---------------------------------" << std::endl;
   // test();
-  test2();
+//   test2();
+  test3();
   return 0;
 }
 
@@ -80,4 +84,25 @@ void test2()
     std::cerr << "Error Form: " << e.what() << '\n';
   }
   
+}
+
+void test3()
+{
+	try
+	{
+		Bureaucrat bureaucrat1("Toto", 144);
+		Bureaucrat bureaucrat2("tata", 136);
+		ShrubberyCreationForm shrubberyCreationForm("home");
+
+		// std::cout << shrubberyCreationForm <<std::endl;
+		bureaucrat1.signForm(shrubberyCreationForm);
+		shrubberyCreationForm.execute(bureaucrat2);
+		// std::cout << shrubberyCreationForm <<std::endl;
+
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
 }

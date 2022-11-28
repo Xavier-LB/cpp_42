@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 14:30:37 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/27 14:59:46 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/28 19:16:49 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,15 @@ private:
 public:
 // Contructors and Destructor --------------------------------------------------
 	ShrubberyCreationForm(void);
-	ShrubberyCreationForm(const std::string m_target);
+	ShrubberyCreationForm(const std::string target);
 	ShrubberyCreationForm(ShrubberyCreationForm const & src);
 	ShrubberyCreationForm & operator=(ShrubberyCreationForm const & src);
 	~ShrubberyCreationForm();
+
+// Secondary functions ---------------------------------------------------------
+	void action(void) const;
+	void execute(Bureaucrat const & executor) const;
+
 
 // Getters ---------------------------------------------------------------------
 	const std::string & getTarget() const;

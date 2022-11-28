@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+         #
+#    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/25 14:45:26 by xle-baux          #+#    #+#              #
-#    Updated: 2022/11/27 02:11:21 by xlb              ###   ########.fr        #
+#    Updated: 2022/11/28 13:52:17 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= Bureaucrat
 
-SRCS	= main.cpp Bureaucrat.cpp Form.cpp
+SRCS	= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
