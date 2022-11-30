@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:57:47 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/25 13:13:52 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/30 17:44:35 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ public:
 
 // Secondary functions ---------------------------------------------------------
 	std::string getType(void);
+	virtual Brain *getBrain(void) const;
 
 // Mandatory functions ---------------------------------------------------------
 	virtual void makeSound(void) const;

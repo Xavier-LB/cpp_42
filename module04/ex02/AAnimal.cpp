@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:55:46 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/25 13:32:53 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/30 17:25:56 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,3 +46,8 @@ const std::string &AAnimal::getType(void) const
 }
 
 // Mandatory functions ---------------------------------------------------------
+
+void AAnimal::makeSound(void) const
+{
+	std::cout << "AAnimal sound" << std::endl;
+}

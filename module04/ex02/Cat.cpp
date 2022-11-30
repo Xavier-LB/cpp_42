@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:58:05 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/22 17:02:55 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/30 17:44:45 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ Cat::Cat(Cat const & src)
 
 Cat::~Cat(void)
 {
-	delete this->m_brain;
 	std::cout << "(Cat) Destructor" << std::endl;
+	delete this->m_brain;
 }
 
 Cat & Cat::operator=(Cat const & src)
@@ -47,6 +47,11 @@ Cat & Cat::operator=(Cat const & src)
 std::string Cat::getType(void)
 {
 	return (this->type);
+}
+
+Brain *Cat::getBrain(void) const
+{
+	return (this->m_brain);
 }
 
 // Mandatory functions ---------------------------------------------------------

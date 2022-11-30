@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:56:26 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/22 16:48:26 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/30 16:05:27 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,11 @@ Dog & Dog::operator=(Dog const & src)
 std::string Dog::getType(void)
 {
 	return (this->type);
+}
+
+Brain *Dog::getBrain(void) const
+{
+	return (this->m_brain);
 }
 
 // Mandatory functions ---------------------------------------------------------

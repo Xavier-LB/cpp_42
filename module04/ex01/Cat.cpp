@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:58:05 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/22 17:02:55 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/30 16:05:32 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,11 @@ Cat & Cat::operator=(Cat const & src)
 std::string Cat::getType(void)
 {
 	return (this->type);
+}
+
+Brain *Cat::getBrain(void) const
+{
+	return (this->m_brain);
 }
 
 // Mandatory functions ---------------------------------------------------------

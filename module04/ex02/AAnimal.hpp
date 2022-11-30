@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:54:45 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/25 14:00:25 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/30 18:01:46 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define AANIMAL_HPP
 
 # include <iostream>
+# include "Brain.hpp"
 
 class AAnimal
 {
@@ -31,6 +32,7 @@ public:
 
 // Secondary functions ---------------------------------------------------------
 	const std::string &getType(void) const;
+	virtual Brain *getBrain( void ) const = 0;
 	
 // Mandatory functions ---------------------------------------------------------
 	virtual void makeSound(void) const = 0;

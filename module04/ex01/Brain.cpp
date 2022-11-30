@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 13:40:17 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/22 14:29:39 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/30 17:14:23 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,14 @@ Brain & Brain::operator=(Brain const & src)
 
 // Secondary functions ---------------------------------------------------------
 
+void Brain::setIdea(std::string idea, int i)
+{
+	this->m_ideas[i] = idea;
+}
+
+std::string Brain::getIdea(int i) const
+{
+	return (this->m_ideas[i]);
+}
 
 // Mandatory functions ---------------------------------------------------------

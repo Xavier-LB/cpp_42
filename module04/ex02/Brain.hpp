@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 13:40:35 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/22 14:30:10 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/30 17:42:58 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ public:
 	Brain & operator=(Brain const & src); // Copy assignment operator
 
 // Secondary functions ---------------------------------------------------------
+	void setIdea(std::string idea, int i);
+	std::string getIdea(int i) const;
 
 // Mandatory functions ---------------------------------------------------------
 };

@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 19:14:12 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/25 12:15:52 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/30 13:10:23 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ const std::string &WrongAnimal::getType(void) const
 // Mandatory functions ---------------------------------------------------------
 void WrongAnimal::makeSound(void) const
 {
-	std::cout << "Wrong Animal" << std::endl;
+	std::cout << "Wrong Animal sound" << std::endl;
 	return ;
 }

@@ -6,19 +6,19 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:55:46 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/11/20 17:00:56 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/11/30 13:08:53 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 // Contructors and Destructor --------------------------------------------------
-Animal::Animal(void)
+Animal::Animal(void) : type("Animal not specified")
 {
 	std::cout << "(Animal) Default constructor" << std::endl;
 }
 
-Animal::Animal(Animal const & src)
+Animal::Animal(Animal const & src) : type(src.type)
 {
 	*this = src;
 	std::cout << "(Animal) Copy constructor" << std::endl;
@@ -31,7 +31,10 @@ Animal::~Animal(void)
 
 Animal & Animal::operator=(Animal const & src)
 {
-	this->type = src.type;
+	if (this != &src)
+	{
+		this->type = src.type;
+	}
 	std::cout << "(Animal) Copy assignment operator" << std::endl;
 	return *this;
 }
@@ -45,5 +48,5 @@ const std::string &Animal::getType(void) const
 // Mandatory functions ---------------------------------------------------------
 void Animal::makeSound(void) const
 {
- return ;
+	std::cout << "Default Animal sound... sound?" << std::endl;
 }
