@@ -6,14 +6,14 @@
 #    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/25 14:45:26 by xle-baux          #+#    #+#              #
-#    Updated: 2022/12/02 15:05:04 by xle-baux         ###   ########.fr        #
+#    Updated: 2022/12/02 16:03:50 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= Bureaucrat
 
 SRCS	= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp \
-			RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+			RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
