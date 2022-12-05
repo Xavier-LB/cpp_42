@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 14:45:33 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/02 16:03:32 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/05 20:46:00 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,18 @@ int main() {
 
 void test1()
 {
-	Intern someRandomIntern;
-	Form* rrf;
-	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	try
+	{
+		Intern someRandomIntern;
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+
+		std::cout << *rrf;
+		delete rrf;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
 }

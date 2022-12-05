@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 15:42:49 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/04 18:49:26 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/05 20:04:46 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 class Intern
 {
 private:
-	const std::string *_formName;
 
 public:
 	Intern();
@@ -30,13 +29,11 @@ public:
 	Intern & operator=(Intern const & src);
 	virtual ~Intern();
 
+	Form* makeForm(const std::string & formName, const std::string & target) const;
 
-	// const functions _functions;
-	typedef int (*functions)(std::string target);
-	Form* makeForm(std::string const & formName, std::string const & target);
-	Form* createShrubberyCreationForm(std::string const target) const;
-	Form* createRobotomyRequestForm(std::string const target) const;
-	Form* createPresidentialPardonForm(std::string const target) const;
+	Form* createShrubberyCreationForm(std::string const & target) const;
+	Form* createRobotomyRequestForm(std::string const & target) const;
+	Form* createPresidentialPardonForm(std::string const & target) const;
 
 	class UnknowFormException : public std::exception
 	{
