@@ -5,20 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/25 14:45:26 by xle-baux          #+#    #+#              #
-#    Updated: 2022/12/06 10:08:36 by xle-baux         ###   ########.fr        #
+#    Created: 2022/12/06 09:41:54 by xle-baux          #+#    #+#              #
+#    Updated: 2022/12/06 12:33:10 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= Bureaucrat
+NAME	= convert
 
-SRCS	= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp \
-			RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
+SRCS	= main.cpp Convert.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
 CXX		= c++
-FLAGS	= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -f
 
@@ -31,7 +30,7 @@ ${NAME}:	${OBJS}
 				${CXX} ${FLAGS} -o ${NAME} ${OBJS}
 
 clean:		
-				${RM} ${OBJS} *"_shrubbery"
+				${RM} ${OBJS}
 
 fclean:		clean
 				${RM} ${NAME}

@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 15:42:52 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/05 20:46:14 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/06 09:26:03 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,25 +50,25 @@ Form*    Intern::createPresidentialPardonForm(std::string const & target) const 
 
 Form* Intern::makeForm(const std::string& form, const std::string& target) const
 {
-    std::string formList[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
-    Form* (Intern::*funcList[3])(const std::string&) const = \
-        {&Intern::createShrubberyCreationForm, \
-        &Intern::createRobotomyRequestForm, \
-        &Intern::createPresidentialPardonForm};
+	std::string formList[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
+	Form* (Intern::*funcList[3])(const std::string &) const =
+			{&Intern::createShrubberyCreationForm,
+			&Intern::createRobotomyRequestForm,
+			&Intern::createPresidentialPardonForm};
 
-    for (int i = 0; i < 3; ++i)
-    {
-        if (form == formList[i])
-        {
+	for (int i = 0; i < 3; ++i)
+	{
+		if (form == formList[i])
+		{
 			std::cout << "Intern creates " << form << std::endl;
-            return (this->*funcList[i])(target);
-        }
-    }
+			return (this->*funcList[i])(target);
+		}
+	}
 	throw Intern::UnknowFormException();
-    std::cerr << "There is no form with that name: " << form << std::endl;
-    return NULL;
+	std::cerr << "There is no form with that name: " << form << std::endl;
+	return NULL;
 }
 
 const char*    Intern::UnknowFormException::what() const throw() {
-    return ("Intern: Can't find the requested form!");
+	return ("Intern: Can't find the requested form!");
 }
