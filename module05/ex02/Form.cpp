@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 22:01:22 by xlb               #+#    #+#             */
-/*   Updated: 2022/12/02 10:28:48 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/07 17:20:38 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,20 +89,6 @@ void Form::beSigned(const Bureaucrat & bureaucrat)
 	else
 		throw Form::GradeTooLowException();
 }
-
-// void Form::execute(Bureaucrat const & executor) const
-// {
-// 	if (executor.getGrade() > this->getExcAuth())
-// 	{
-// 		throw GradeTooLowException();
-// 	}
-// 	else if (this->getSigned() == false)
-// 	{
-// 		throw ExecuteUnsignedException();
-// 	}
-// 	else
-// 		action();
-// }
 
 // Exeptions -------------------------------------------------------------------
 const char* Form::GradeTooHighException::what() const throw()

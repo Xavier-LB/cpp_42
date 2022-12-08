@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Convert.hpp                                        :+:      :+:    :+:   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 09:55:14 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/07 15:43:31 by xle-baux         ###   ########.fr       */
+/*   Created: 2022/12/08 10:37:49 by xle-baux          #+#    #+#             */
+/*   Updated: 2022/12/08 13:53:45 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERT_HPP
-# define CONVERT_HPP
+#ifndef WHATEVER_HPP
+# define WHATEVER_HPP
 
-# include <iostream>
-# include <cstring>
-# include <cmath>
+template <typename T>
+void swap(T &a, T &b);
 
-void	printAsChar(long double ldNum);
-void	printAsInt(long double ldNum);
-void	printAsFloat(long double ldNum);
-void	printAsDouble(long double ldNum);
+template <typename T>
+T min(T &a, T &b);
+
+template <typename T>
+T max(T &a, T &b);
 
 #endif

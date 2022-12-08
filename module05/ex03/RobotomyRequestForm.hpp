@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 14:31:26 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/02 15:00:22 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/07 17:39:04 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define ROBOTOMYREQUESTFORM_HPP
 
 #include "Form.hpp"
-#include<ctime>
+#include <ctime>
 
 class RobotomyRequestForm : public Form
 {

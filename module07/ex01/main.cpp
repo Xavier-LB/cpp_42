@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Convert.hpp                                        :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 09:55:14 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/07 15:43:31 by xle-baux         ###   ########.fr       */
+/*   Created: 2022/12/08 16:05:04 by xle-baux          #+#    #+#             */
+/*   Updated: 2022/12/08 18:02:20 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERT_HPP
-# define CONVERT_HPP
+#include "iter.hpp"
+#include <iostream>
+#include <cstdlib>
+#include <unistd.h>
+#include <ctime>
 
-# include <iostream>
-# include <cstring>
-# include <cmath>
 
-void	printAsChar(long double ldNum);
-void	printAsInt(long double ldNum);
-void	printAsFloat(long double ldNum);
-void	printAsDouble(long double ldNum);
+int main()
+{
+	
+	return 0;
+}
 
-#endif
+template <typename T>
+void iter(T & array, int len, void (*function)(T))
+{
+	for (int i(0); i < len; i++)
+	{
+		function()(array[i]);
+	}
+}

@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Convert.hpp                                        :+:      :+:    :+:   */
+/*   B.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 09:55:14 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/07 15:43:31 by xle-baux         ###   ########.fr       */
+/*   Created: 2022/12/07 17:13:08 by xle-baux          #+#    #+#             */
+/*   Updated: 2022/12/07 17:13:17 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONVERT_HPP
-# define CONVERT_HPP
+#ifndef B_HPP
+# define B_HPP
 
-# include <iostream>
-# include <cstring>
-# include <cmath>
+# include "Base.hpp"
 
-void	printAsChar(long double ldNum);
-void	printAsInt(long double ldNum);
-void	printAsFloat(long double ldNum);
-void	printAsDouble(long double ldNum);
+class B : public Base
+{
+
+};
 
 #endif
