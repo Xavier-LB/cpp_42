@@ -6,7 +6,7 @@
 #    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/25 14:45:26 by xle-baux          #+#    #+#              #
-#    Updated: 2022/11/25 14:46:07 by xle-baux         ###   ########.fr        #
+#    Updated: 2022/12/09 10:41:01 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ ${NAME}:	${OBJS}
 				${CXX} ${FLAGS} -o ${NAME} ${OBJS}
 
 clean:		
-				${RM} ${OBJS}
+				${RM} ${OBJS} "valgrind-out.txt"
 
 fclean:		clean
 				${RM} ${NAME}

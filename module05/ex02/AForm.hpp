@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 22:01:37 by xlb               #+#    #+#             */
-/*   Updated: 2022/12/02 13:24:28 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:12:43 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef AFORM_HPP
+# define AFORM_HPP
 
 # include "Bureaucrat.hpp"
 # include <iomanip>
@@ -20,21 +20,21 @@
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
 private:
 	std::string const	m_name;
 	bool				m_signed;
-	int					m_singAuth;
+	int 				m_singAuth;
 	int					m_excAuth;
 
 public:
 // Contructors and Destructor --------------------------------------------------
-	Form();
-	Form(std::string const &name, int singAuth, int excAuth) ;
-	Form(Form const & src);
-	Form & operator=(Form const & src);
-	virtual ~Form();
+	AForm();
+	AForm(std::string const &name, int singAuth, int excAuth) ;
+	AForm(AForm const & src);
+	AForm & operator=(AForm const & src);
+	virtual ~AForm();
 
 // Getters ---------------------------------------------------------------------
 	virtual const std::string getName() const;
@@ -65,6 +65,6 @@ public:
 };
 
 // Overload --------------------------------------------------------------------
-std::ostream &operator<<(std::ostream & out, Form const & src);
+std::ostream &operator<<(std::ostream & out, AForm const & src);
 
 #endif

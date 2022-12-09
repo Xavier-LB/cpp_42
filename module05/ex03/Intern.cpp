@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/02 15:42:52 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/06 09:26:03 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:26:21 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,22 +36,22 @@ Intern::~Intern()
 	std::cout << "(Form) Destructor" << std::endl;
 }
 
-Form*    Intern::createShrubberyCreationForm(std::string const & target) const {
+AForm*    Intern::createShrubberyCreationForm(std::string const & target) const {
     return new ShrubberyCreationForm(target);
 }
 
-Form*    Intern::createRobotomyRequestForm(std::string const & target) const {
+AForm*    Intern::createRobotomyRequestForm(std::string const & target) const {
     return new RobotomyRequestForm(target);
 }
 
-Form*    Intern::createPresidentialPardonForm(std::string const & target) const {
+AForm*    Intern::createPresidentialPardonForm(std::string const & target) const {
     return new PresidentialPardonForm(target);
 }
 
-Form* Intern::makeForm(const std::string& form, const std::string& target) const
+AForm* Intern::makeForm(const std::string& form, const std::string& target) const
 {
 	std::string formList[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
-	Form* (Intern::*funcList[3])(const std::string &) const =
+	AForm* (Intern::*funcList[3])(const std::string &) const =
 			{&Intern::createShrubberyCreationForm,
 			&Intern::createRobotomyRequestForm,
 			&Intern::createPresidentialPardonForm};

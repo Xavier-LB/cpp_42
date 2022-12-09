@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 22:01:37 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/27 02:16:21 by xlb              ###   ########.fr       */
+/*   Updated: 2022/12/09 11:56:55 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class Form
 private:
 	std::string const	m_name;
 	bool				m_signed;
-	int					m_singAuth;
-	int					m_excAuth;
+	int const			m_singAuth;
+	int	const			m_excAuth;
 
 public:
 // Contructors and Destructor --------------------------------------------------

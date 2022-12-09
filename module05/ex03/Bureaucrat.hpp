@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 14:45:29 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/02 13:54:14 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:26:42 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include <iostream>
 # include <string>
 # include <stdexcept>
-# include "Form.hpp"
+# include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -46,8 +46,8 @@ public:
 	void	decrementGrade();
 
 // Mandatory function ----------------------------------------------------------
-	void signForm(Form & form) const;
-	void executeForm(Form const & form);
+	void signForm(AForm & form) const;
+	void executeForm(AForm const & form);
 
 // Exceptions ------------------------------------------------------------------
 	class GradeTooHighException : public std::exception

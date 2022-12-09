@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 22:01:22 by xlb               #+#    #+#             */
-/*   Updated: 2022/11/27 02:17:14 by xlb              ###   ########.fr       */
+/*   Updated: 2022/12/09 12:04:11 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,8 @@ Form & Form::operator=(Form const & src)
 	std::cout << "(Form) Copy assignment operator" << std::endl;
 	if (this != &src)
 	{
+		new (this) Form(src.m_name, src.m_singAuth, src.m_excAuth);
 		this->m_signed = src.m_signed;
-		this->m_singAuth = src.m_singAuth;
-		this->m_excAuth = src.m_excAuth;
 	}
 	return *this;
 }

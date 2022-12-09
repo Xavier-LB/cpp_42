@@ -64,6 +64,7 @@
 		"cstddef": "cpp",
 		"ios": "cpp",
 		"memory": "cpp",
-		"iomanip": "cpp"
+		"iomanip": "cpp",
+		"*.tpp": "cpp"
 	}
 }

@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+         #
+#    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 21:25:59 by xlb               #+#    #+#              #
-#    Updated: 2022/12/08 21:26:00 by xlb              ###   ########.fr        #
+#    Updated: 2022/12/09 17:26:35 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= iter
+NAME	= array
 
 SRCS	= main.cpp
 
@@ -21,6 +21,9 @@ CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -f
 
+VALGRING = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt ./
+VALGRING_OUT = valgrind-out.txt
+
 .cpp.o:		
 				${CXX} ${FLAGS} -c $< -o ${<:.cpp=.o}
 				
@@ -29,11 +32,14 @@ all:		${NAME}
 ${NAME}:	${OBJS}
 				${CXX} ${FLAGS} -o ${NAME} ${OBJS}
 
+run:		clean all
+				make clean && clear && ${VALGRING}${NAME}
+
 clean:		
 				${RM} ${OBJS}
 
 fclean:		clean
-				${RM} ${NAME}
+				${RM} ${NAME} ${VALGRING_OUT}
 
 re:			fclean all
 

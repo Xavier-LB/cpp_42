@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 22:01:22 by xlb               #+#    #+#             */
-/*   Updated: 2022/12/07 17:20:38 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:13:30 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
 // Contructors and Destructor --------------------------------------------------
-Form::Form() : m_name(""),
+AForm::AForm() : m_name(""),
 				m_signed(false),
 				m_singAuth(0),
 				m_excAuth(0)
 {
-	std::cout << "(Form) Default constructor" << std::endl;
+	std::cout << "(AForm) Default constructor" << std::endl;
 }
 
-Form::Form(std::string const &name, int singAuth, int excAuth) : m_name(name),
+AForm::AForm(std::string const &name, int singAuth, int excAuth) : m_name(name),
 																m_signed(false),
 																m_singAuth(singAuth),
 																m_excAuth(excAuth)
@@ -30,21 +30,21 @@ Form::Form(std::string const &name, int singAuth, int excAuth) : m_name(name),
 		throw GradeTooHighException();
 	else if (singAuth > 150 || excAuth > 150)
 		throw GradeTooLowException();
-	std::cout << "(Form) Initial values constructor" << std::endl;
+	std::cout << "(AForm) Initial values constructor" << std::endl;
 }
 
-Form::Form(Form const & src) : m_name(src.m_name),
+AForm::AForm(AForm const & src) : m_name(src.m_name),
 								m_signed(src.m_signed),
 								m_singAuth(src.m_singAuth),
 								m_excAuth(src.m_excAuth)
 {
-	std::cout << "(Form) Copy constructor" << std::endl;
+	std::cout << "(AForm) Copy constructor" << std::endl;
 	*this = src;
 }
 
-Form & Form::operator=(Form const & src)
+AForm & AForm::operator=(AForm const & src)
 {
-	std::cout << "(Form) Copy assignment operator" << std::endl;
+	std::cout << "(AForm) Copy assignment operator" << std::endl;
 	if (this != &src)
 	{
 		this->m_signed = src.m_signed;
@@ -54,60 +54,60 @@ Form & Form::operator=(Form const & src)
 	return *this;
 }
 
-Form::~Form()
+AForm::~AForm()
 {
-	std::cout << "(Form) Destructor" << std::endl;
+	std::cout << "(AForm) Destructor" << std::endl;
 }
 
 
 // Getters ---------------------------------------------------------------------
-const std::string Form::getName() const
+const std::string AForm::getName() const
 {
 	return (this->m_name);
 }
 
-bool Form::getSigned() const
+bool AForm::getSigned() const
 {
 	return (this->m_signed);
 }
 
-int Form::getSingAuth() const
+int AForm::getSingAuth() const
 {
 	return (this->m_singAuth);
 }
 
-int Form::getExcAuth() const
+int AForm::getExcAuth() const
 {
 	return (this->m_excAuth);
 }
 
 // Mandatory function ----------------------------------------------------------
-void Form::beSigned(const Bureaucrat & bureaucrat)
+void AForm::beSigned(const Bureaucrat & bureaucrat)
 {
 	if (bureaucrat.getGrade() <= this->getSingAuth())
 		this->m_signed = true;
 	else
-		throw Form::GradeTooLowException();
+		throw AForm::GradeTooLowException();
 }
 
 // Exeptions -------------------------------------------------------------------
-const char* Form::GradeTooHighException::what() const throw()
+const char* AForm::GradeTooHighException::what() const throw()
 {
 	return "Grade too high exception";
 }
 
-const char* Form::GradeTooLowException::what() const throw()
+const char* AForm::GradeTooLowException::what() const throw()
 {
 	return "Grade too low exception";
 }
 
-const char* Form::ExecuteUnsignedException::what() const throw()
+const char* AForm::ExecuteUnsignedException::what() const throw()
 {
 	return "Execute unsigned exception";
 }
 
 // Overload --------------------------------------------------------------------
-std::ostream &operator<<(std::ostream & out, Form const & src)
+std::ostream &operator<<(std::ostream & out, AForm const & src)
 {
 	std::string boolSigned;
 	

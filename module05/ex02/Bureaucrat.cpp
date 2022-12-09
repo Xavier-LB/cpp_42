@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 14:45:30 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/02 14:09:12 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:16:30 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	Bureaucrat::incrementGrade()
 }
 
 // Mandatory function ----------------------------------------------------------
-void	Bureaucrat::signForm(Form & form) const
+void	Bureaucrat::signForm(AForm & form) const
 {
 	try
 	{
@@ -87,7 +87,7 @@ void	Bureaucrat::signForm(Form & form) const
 	}
 }
 
-void	Bureaucrat::executeForm(Form const & form)
+void	Bureaucrat::executeForm(AForm const & form)
 {
 	try
 	{

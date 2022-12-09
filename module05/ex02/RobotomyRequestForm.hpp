@@ -6,17 +6,17 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 14:31:26 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/02 15:00:22 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:14:25 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ROBOTOMYREQUESTFORM_HPP
 # define ROBOTOMYREQUESTFORM_HPP
 
-#include "Form.hpp"
+#include "AForm.hpp"
 #include<ctime>
 
-class RobotomyRequestForm : public Form
+class RobotomyRequestForm : public AForm
 {
 private:
 	const std::string m_target;

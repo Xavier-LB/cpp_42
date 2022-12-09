@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 14:31:13 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/02 15:01:53 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:17:33 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 // Contructors and Destructor --------------------------------------------------
 RobotomyRequestForm::RobotomyRequestForm(void)
-	: Form("RobotomyRequestForm", 72, 45), m_target("")
+	: AForm("RobotomyRequestForm", 72, 45), m_target("")
 {
 	std::cout << "(RobotomyRequestForm) Default constructor" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string target)
-	:Form("RobotomyRequestForm", 72, 45), m_target(target)
+	:AForm("RobotomyRequestForm", 72, 45), m_target(target)
 {
 	std::cout << "(RobotomyRequestForm) Initial values constructor" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & src)
-	: Form(src), m_target(src.m_target)
+	: AForm(src), m_target(src.m_target)
 {
 	std::cout << "(RobotomyRequestForm) Copy constructor" << std::endl;
 	*this = src;

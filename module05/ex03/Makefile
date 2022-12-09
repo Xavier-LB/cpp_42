@@ -6,13 +6,13 @@
 #    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/25 14:45:26 by xle-baux          #+#    #+#              #
-#    Updated: 2022/12/06 10:08:36 by xle-baux         ###   ########.fr        #
+#    Updated: 2022/12/09 12:26:30 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= Bureaucrat
 
-SRCS	= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp \
+SRCS	= main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp \
 			RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
@@ -31,7 +31,7 @@ ${NAME}:	${OBJS}
 				${CXX} ${FLAGS} -o ${NAME} ${OBJS}
 
 clean:		
-				${RM} ${OBJS} *"_shrubbery"
+				${RM} ${OBJS} *"_shrubbery" "valgrind-out.txt"
 
 fclean:		clean
 				${RM} ${NAME}

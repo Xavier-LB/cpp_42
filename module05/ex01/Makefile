@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+         #
+#    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/25 14:45:26 by xle-baux          #+#    #+#              #
-#    Updated: 2022/11/27 02:11:21 by xlb              ###   ########.fr        #
+#    Updated: 2022/12/09 10:40:46 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ ${NAME}:	${OBJS}
 				${CXX} ${FLAGS} -o ${NAME} ${OBJS}
 
 clean:		
-				${RM} ${OBJS}
+				${RM} ${OBJS} "valgrind-out.txt"
 
 fclean:		clean
 				${RM} ${NAME}

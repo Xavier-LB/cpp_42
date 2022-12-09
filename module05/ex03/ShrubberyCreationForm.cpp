@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 14:30:25 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/02 14:01:29 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:24:19 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 // Contructors and Destructor --------------------------------------------------
 ShrubberyCreationForm::ShrubberyCreationForm(void)
-	: Form("ShrubberyCreationForm", 145, 137), m_target("")
+	: AForm("ShrubberyCreationForm", 145, 137), m_target("")
 {
 	std::cout << "(ShrubberyCreationForm) Default constructor" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string target)
-	:Form("ShrubberyCreationForm", 145, 137), m_target(target)
+	:AForm("ShrubberyCreationForm", 145, 137), m_target(target)
 {
 	std::cout << "(ShrubberyCreationForm) Initial values constructor" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & src)
-	: Form(src), m_target(src.m_target)
+	: AForm(src), m_target(src.m_target)
 {
 	std::cout << "(ShrubberyCreationForm) Copy constructor" << std::endl;
 	*this = src;

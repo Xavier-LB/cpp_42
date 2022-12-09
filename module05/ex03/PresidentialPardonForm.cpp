@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 14:32:01 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/02 15:04:05 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:23:54 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 // Contructors and Destructor --------------------------------------------------
 PresidentialPardonForm::PresidentialPardonForm(void)
-	: Form("PresidentialPardonForm", 25, 5), m_target("")
+	: AForm("PresidentialPardonForm", 25, 5), m_target("")
 {
 	std::cout << "(PresidentialPardonForm) Default constructor" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string target)
-	:Form("PresidentialPardonForm", 25, 5), m_target(target)
+	:AForm("PresidentialPardonForm", 25, 5), m_target(target)
 {
 	std::cout << "(PresidentialPardonForm) Initial values constructor" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const & src)
-	: Form(src), m_target(src.m_target)
+	: AForm(src), m_target(src.m_target)
 {
 	std::cout << "(PresidentialPardonForm) Copy constructor" << std::endl;
 	*this = src;

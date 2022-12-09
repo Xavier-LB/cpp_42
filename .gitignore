@@ -1,3 +1,5 @@
+valgrind-out.txt
+
 # Prerequisites
 *.d
 .nfs*
