@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: xlb <xlb@student.42.fr>                    +#+  +:+       +#+         #
+#    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 16:04:45 by xle-baux          #+#    #+#              #
-#    Updated: 2022/12/08 21:25:23 by xlb              ###   ########.fr        #
+#    Updated: 2022/12/10 12:43:36 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,12 +22,12 @@ CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -f
 
 .cpp.o:		
-				${CXX} ${FLAGS} -c $< -o ${<:.cpp=.o}
+				${CXX} ${CXXFLAGS} -c $< -o ${<:.cpp=.o}
 				
 all:		${NAME}
 
 ${NAME}:	${OBJS}
-				${CXX} ${FLAGS} -o ${NAME} ${OBJS}
+				${CXX} ${CXXFLAGS} -o ${NAME} ${OBJS}
 
 clean:		
 				${RM} ${OBJS}

@@ -65,6 +65,7 @@
 		"ios": "cpp",
 		"memory": "cpp",
 		"iomanip": "cpp",
-		"*.tpp": "cpp"
+		"*.tpp": "cpp",
+		"list": "cpp"
 	}
 }

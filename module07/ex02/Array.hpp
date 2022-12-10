@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 21:26:22 by xlb               #+#    #+#             */
-/*   Updated: 2022/12/09 18:11:07 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/10 13:18:21 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,13 @@ public:
 	};
 	
 	~Array(void) {delete [] m_array;};
+
+	T & operator[](unsigned int i)
+	{
+		if (i >= m_size)
+			throw IndexIsOutOfBounds();
+		return (m_array[i]);
+	}
 
 	class IndexIsOutOfBounds : public std::exception
 	{

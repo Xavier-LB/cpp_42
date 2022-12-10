@@ -6,7 +6,7 @@
 #    By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 21:25:59 by xlb               #+#    #+#              #
-#    Updated: 2022/12/09 17:26:35 by xle-baux         ###   ########.fr        #
+#    Updated: 2022/12/10 12:43:39 by xle-baux         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,14 +25,17 @@ VALGRING = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes 
 VALGRING_OUT = valgrind-out.txt
 
 .cpp.o:		
-				${CXX} ${FLAGS} -c $< -o ${<:.cpp=.o}
+				${CXX} ${CXXFLAGS} -c $< -o ${<:.cpp=.o}
 				
 all:		${NAME}
 
 ${NAME}:	${OBJS}
-				${CXX} ${FLAGS} -o ${NAME} ${OBJS}
+				${CXX} ${CXXFLAGS} -o ${NAME} ${OBJS}
 
 run:		clean all
+				make clean && clear && ./${NAME} > ${VALGRING_OUT}
+
+debug:		clean all
 				make clean && clear && ${VALGRING}${NAME}
 
 clean:		
