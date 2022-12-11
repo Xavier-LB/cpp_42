@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:14:48 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/08 10:13:14 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/11 13:43:01 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,14 +68,14 @@ void identify(Base& p)
 		std::cout << "A&" << std::endl;
 	}
 	catch(...) {}
-		try
+	try
 	{
 		B& b = dynamic_cast<B&>(p);
 		(void)b;
 		std::cout << "B&" << std::endl;
 	}
 	catch(...) {}
-		try
+	try
 	{
 		C& c = dynamic_cast<C&>(p);
 		(void)c;

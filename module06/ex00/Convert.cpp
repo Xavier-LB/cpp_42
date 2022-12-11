@@ -6,7 +6,7 @@
 /*   By: xle-baux <xle-baux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 09:55:16 by xle-baux          #+#    #+#             */
-/*   Updated: 2022/12/07 16:09:51 by xle-baux         ###   ########.fr       */
+/*   Updated: 2022/12/11 13:09:04 by xle-baux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	printAsChar(long double ldNum)
 	if (ldNum < 0 || ldNum > 127 || std::isnan(ldNum))
 		std::cout << "char: impossible" << std::endl;
 	else if(!isprint(ldNum))
-		std::cout << "char: Mon displayable" << std::endl;
+		std::cout << "char: Non displayable" << std::endl;
 	else
 		std::cout << "char: " << static_cast<char>(ldNum) << std::endl;
 }
